@@ -55,13 +55,13 @@ def task_3(number):
 #task_3(input('n = '))
 
 def task_4(number):
-    max = number % 10
+    max_num = number % 10
     while number != 0:
         number = number // 10
-        num_m = number % 10
-        if max < num_m:
-            max = num_m
-    print(f'Наибольшая цифра в числе => {max}.')
+        cur_num = number % 10
+        if max_num < cur_num:
+            max_num = cur_num
+    print(f'Наибольшая цифра в числе => {max_num}.')
 #task_4(int(input('Введите число: ')))
 
 def task_5_and_6():
@@ -72,9 +72,11 @@ def task_5_and_6():
         profitability = revenue - costs
         workers_num = int(input('Сколько работников в фирме?: '))
         print(f'Всего доходов: {profitability}, в пересчёте на одного работника: {profitability / workers_num}.')
+    elif revenue == costs:
+        print('Компания работает в ноль. Прибыль равна убыткам.')
     else:
         print('Компания работает в убыток — издержки больше выручки.')
-#task_5_and_6()
+task_5_and_6()
 
 def task_7():
     next_day = int(input('Число километров в первый день: '))
@@ -85,4 +87,4 @@ def task_7():
         next_day = next_day + percent_10
         num_day = num_day + 1
     print(f'Ответ: на {num_day} день спортсмен достиг результата — не менее {kilometer_result} км.')
-task_7()
+#task_7()
